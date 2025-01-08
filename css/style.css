@@ -1,0 +1,527 @@
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/PlusJakartaSans-Bold.woff2') format('woff2'),
+      url('../fonts/../fonts/PlusJakartaSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/PlusJakartaSans-ExtraBold.woff2') format('woff2'),
+      url('../fonts/PlusJakartaSans-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/PlusJakartaSans-Medium.woff2') format('woff2'),
+      url('../fonts/PlusJakartaSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/PlusJakartaSans-MediumItalic.woff2') format('woff2'),
+      url('../fonts/PlusJakartaSans-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/PlusJakartaSans-Regular.woff2') format('woff2'),
+      url('../fonts/PlusJakartaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/PlusJakartaSans-Italic.woff2') format('woff2'),
+      url('../fonts/PlusJakartaSans-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/PlusJakartaSans-SemiBold.woff2') format('woff2'),
+      url('../fonts/PlusJakartaSans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+*:root{
+  --black: #141414;
+  --grey:#b6b5b5;
+  --brandPrimary:#00fa9a;
+  --brandHover:#00b6b6;
+  --hover-primary: #ff3d4f;
+  --special:#db4444;
+}
+
+
+* {
+  box-sizing: border-box ;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: normal;
+  line-height: 29.6px;
+  font-style: normal;
+  color: var(--black);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+
+
+.display-3 {
+  font-family: 'Plus Jakarta Sans';
+  font-size: 68px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 68px;
+}
+
+.secH {
+   font-family: 'Plus Jakarta Sans';
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+  margin-bottom: 40px;
+}
+
+.therdH {
+   font-family: 'Plus Jakarta Sans';
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  margin: 0 0 20px;
+}
+
+.fourthH {
+   font-family: 'Plus Jakarta Sans';
+  font-size: 34px;
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 52px;
+}
+.fifthH {
+   font-family: 'Plus Jakarta Sans';
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.sixthH {
+   font-family: 'Plus Jakarta Sans';
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.bodysmall{
+  font-size: 12px;
+}
+
+header{
+  height: 107px;
+}
+
+/* Initial header styling */
+
+#main-header {
+  transition: all 0.5s ease;
+  z-index: 1055;
+  position: relative;
+}
+
+/* Hidden when out of view */
+.sticky-header {
+  position: fixed;
+  top: -112.48px; /* Hidden initially */
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: top 0.5s ease; /* Slide down animation */
+  animation: slideDown 0.5s ease-in-out both;
+}
+
+@keyframes slideDown {
+  0% {
+    position: fixed;
+    top: -112.48px;
+  }
+  100% {
+    position: fixed;
+    top: 0;
+  }
+}
+.headerAnimate {
+  animation: slideUp 0.5s ease-in-out both;
+}
+
+@keyframes slideUp {
+  0% {
+    top: 50.48px;
+    position: relative;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.sticky-header.visible {
+  top: 0; /* Slide into view */
+}
+
+.navbar-brand {
+  display: inline-block;
+  margin-right: 45px;
+  padding-right: 10px;
+  width: 180px;
+  position: relative;
+}
+
+
+
+
+.navbar-nav .nav-link{
+  font-weight: 600;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+  color: var(--hover-primary);
+}
+.nav-link:focus,
+.nav-link:hover {
+  color: var(--hover-primary);
+ 
+}
+
+
+.dropend .dropdown-toggle::after {
+  content: "\f054";
+  position: absolute;
+  right: 8px;
+  top: 28px;
+  transform: translateY(-50%);
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 900;
+  font-family: "Font Awesome 6 free";
+  border: none;
+}
+.dropdown-toggle::after {
+  content: "\f107";
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 900;
+  font-family: "Font Awesome 6 free";
+  border: none;
+}
+.navbar-nav {
+  gap: 20px;
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: var(--hover-primary);
+  background-color: transparent;
+}
+.dropdown-menu {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none !important;
+}
+
+
+.navbar > .container {
+  position: relative;
+}
+
+
+/* header css end */
+
+.defaultPadding{
+  padding: 70px 0;
+}
+
+/* whatsapp fab */
+.fab-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.Call-fab-container{
+  position: fixed;
+  bottom: 94px;
+  right: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+
+/* footer section start */
+footer {
+  background-color: var(--black);
+  color: #ffffff;
+}
+
+.footer.defaultPadding {
+  padding: 80px 0;
+}
+.footer .footer-brand {
+  display: inline-block;
+  width: 60%;
+  min-width: 150px;
+  margin-bottom: 30px;
+}
+.footer .secH {
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 35px;
+  color: #6eba01 !important;
+  margin-bottom: 35px;
+  font-weight: 500;
+}
+.footer .container > .row {
+  justify-content: space-between;
+}
+.exploreLinks a i {
+  margin-right: 20px;
+  font-size: 18px;
+  color: var(--brandHover);
+}
+.footer ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+.footer ul li {
+  margin-bottom: 5px;
+}
+.footer ul li:last-child {
+  margin-bottom: 0;
+}
+.footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer ul li a:hover {
+  color: var(--brandHover);
+}
+.footer .contact-info i {
+  color: var(--brandHover);
+  font-size: 20px;
+  margin-right: 10px;
+}
+.locationLink {
+  display: inline-block;
+  position: relative;
+  padding-left: 22px;
+}
+.locationLink i {
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+.footer .social-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 40px;
+}
+.footer .social-icons a {
+  display: flex;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 17px;
+  margin-right: 15px;
+}
+.footer .social-icons a:hover {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer .social-icons .facebook {
+  background-color: #0c71c3;
+}
+.footer .social-icons .instagram {
+  background-color: #ea2c59;
+}
+.footer .social-icons .whatsapp {
+  background-color: #25d366;
+}
+
+/* footer section End */
+
+
+
+.product-price{
+  font-weight: 600;
+}
+
+.product-price del{
+  color: var(--grey);
+}
+
+.typeAndcolour{
+  color: var(--grey);
+}
+
+.Special{
+  color: var(--special);
+}
+
+.offerList{
+  padding: 0;
+  list-style: none;
+}
+
+.offerList li i{
+  font-size: 18px ;
+  color: var(--brandHover);
+  vertical-align: baseline;
+  margin-right: 8px;
+}
+
+
+.typeCardWrap{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  gap: 10px 10px;
+}
+.typeCard{
+  position: relative;
+  border: 1px solid var(--grey);
+  transition: border 0.5s ease-in-out;
+  width: 119px;
+  min-width: 119px;
+  padding: 8px;
+  text-align: center;
+}
+.CardAnchor{
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.typeCard img{
+  aspect-ratio: 5/3;
+  object-fit: cover;
+}
+.typeCard p{
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+.product-details .fifthH{
+  margin-top: 24px;
+  text-transform: capitalize;
+}
+
+.typeCard:hover{
+  border: 1px solid  #000;
+}
+
+.typeCard.active{
+  border: 1px solid  var(--special);
+}
+
+.Mybtn{
+  padding: 8px 24px;
+  margin-top: 24px;
+  font-size: 13px;
+  color: #ffffff;
+  border: 1px solid #424142;
+  background-color: transparent;
+  position: relative;
+  transition: color 0.5s ease-in-out;
+  overflow: hidden;
+}
+.Mybtn span{
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.Mybtn::before{
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+pointer-events: none;
+right: 0;
+background-color: #424142;
+transition: transform 0.5s ease-in-out;
+}
+
+.Mybtn:hover{
+  color: #424142;
+}
+
+.Mybtn:hover::before{
+transform: translateX(100%);
+}
+
+.productDescription .container>.row{
+  row-gap: 50px;
+}
+
+
+.Contacts .modal-header {
+  justify-content: center;
+  position: relative;
+}
+.Contacts .modal-header .btn-close {
+ margin: 0 !important;
+ position: absolute;
+ right: 14px;
+ top: 14px;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.option {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.option img {
+  width: 50px;
+  height: 50px;
+}
